@@ -3,6 +3,7 @@ import React from "react";
 import { BlogCardTypes } from "./BlogCardTypes";
 import styles from "./blogcards.module.scss";
 import { formatDate, getReadingTime } from "@/functions/common-function";
+import Image from "next/image";
 
 const BlogCard = (props: any) => {
   return (
@@ -11,7 +12,12 @@ const BlogCard = (props: any) => {
         return (
           <div className={styles.grid}>
             <Link href={"/blog/posts/" + item.slug}>
-              <img src={item.coverImage.url} alt={item.author.name} />
+              <Image
+                src={item.coverImage.url}
+                alt={item.author.name}
+                width={100}
+                height={100}
+              />
               <div className={styles.pub_date}>
                 {formatDate(new Date(item.date))},{" "}
                 {getReadingTime(item.content.html)}
@@ -19,7 +25,9 @@ const BlogCard = (props: any) => {
               <div className={styles.title}>{item.title}</div>
               <div className={styles.description}>{item.excerpt}</div>
             </Link>
-            <img
+            <Image
+              width={10}
+              height={10}
               src={item.author.picture.url}
               alt=""
               style={{

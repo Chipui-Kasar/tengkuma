@@ -37,7 +37,7 @@ function Work() {
       </Head>
       <div className={styles.work_container}>
         <Profilesection />
-        <Profilecontact />
+        {/* <Profilecontact /> */}
         <Profilefooter />
       </div>
     </>

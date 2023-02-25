@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect } from "react";
 import styles from "./profilesection.module.scss";
 
@@ -12,10 +13,11 @@ function Profilesection() {
         unique in my own way
       </div>
       <div className={styles.profile_image}>
-        <img
+        <Image
           src="https://media.graphassets.com/ON2vDzY8Q5yZ1Y7C2Kkp"
           alt="Chipui Kasar"
-          srcSet="https://media.graphassets.com/ON2vDzY8Q5yZ1Y7C2Kkp"
+          width={100}
+          height={100}
         />
       </div>
     </div>

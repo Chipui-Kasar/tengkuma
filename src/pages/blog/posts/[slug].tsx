@@ -8,6 +8,7 @@ import { getRecentPosts } from "@/service/service";
 import { RWebShare } from "react-web-share";
 import Head from "next/head";
 import { BlogCardTypes } from "@/components/blog/blog-cards/BlogCardTypes";
+import Image from "next/image";
 
 let url: any;
 const graphcms = new GraphQLClient(
@@ -104,11 +105,13 @@ export const Articles = ({ post }: any) => {
         <nav>
           <div className={styles.author}>
             <div className={styles.author}>
-              <img
+              <Image
                 aria-label={post.author.name}
                 src={post.author.picture.url}
                 alt={post.author.name}
                 className={styles.author_image}
+                width={10}
+                height={10}
               />
               <span className={styles.author_name}>
                 &nbsp; {post.author.name}, &nbsp;
@@ -150,11 +153,12 @@ export const Articles = ({ post }: any) => {
         </nav>
 
         <h2 className="green">{post.title}</h2>
-        <img
+        <Image
           src={post.coverImage.url}
           alt=""
-          width="100%"
           className={styles.banner_image}
+          width={300}
+          height={300}
         />
         <div
           dangerouslySetInnerHTML={{ __html: post.content.html }}
