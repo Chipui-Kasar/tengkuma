@@ -1,0 +1,125 @@
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5em;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .author {
+      display: flex;
+      place-content: baseline;
+      place-items: center;
+      flex-wrap: wrap;
+      .author_image {
+        width: 20px;
+        height: 20px;
+      }
+      .author_name {
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: rgb(178 54 61);
+          cursor: pointer;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+    }
+    .share_icon {
+      color: #fff;
+      line-height: 7px;
+      li {
+        margin: 0;
+        ::marker {
+          margin: 0;
+        }
+      }
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: darkslategray;
+        cursor: pointer;
+      }
+    }
+  }
+  h2 {
+    font: normal normal bold 40px/1.4em montserrat, sans-serif;
+    margin-bottom: 10px;
+    line-height: normal;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: darkslategray;
+      cursor: pointer;
+    }
+  }
+  .banner_image {
+    margin-bottom: 20px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  .description {
+    text-align: justify;
+    font: normal normal bold 16px/1.7em montserrat, sans-serif;
+  }
+}
+.recent_post {
+  padding: 0 2em;
+  nav {
+    margin-top: 30px;
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+    place-items: center;
+    justify-content: space-between;
+    a {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: darkslategray;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 2em;
+    h2 {
+      font: normal normal bold 30px/1.4em montserrat, sans-serif;
+      margin-bottom: 10px;
+      line-height: normal;
+    }
+    .banner_image {
+      margin-bottom: 20px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .description {
+      text-align: justify;
+      font: normal normal bold 14px/1.7em montserrat, sans-serif;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 0 1em;
+    h2 {
+      font: normal normal bold 20px/1.4em montserrat, sans-serif;
+      margin-bottom: 10px;
+      line-height: normal;
+    }
+    .banner_image {
+      margin-bottom: 20px;
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .description {
+      text-align: justify;
+      font: normal normal bold 12px/1.7em montserrat, sans-serif;
+    }
+  }
+}

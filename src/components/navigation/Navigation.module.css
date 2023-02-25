@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: rgb(31, 35, 44);
   color: #fff;
   position: fixed; /* set the position to fixed */
   top: 0; /* set the top position to 0 */
@@ -27,6 +27,8 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-in-out;
+  align-items: center;
+  width: 50%;
 }
 
 .menu li {
@@ -41,6 +43,8 @@
   color: #fff;
   text-decoration: none;
   font-size: 16px;
+  width: 100%;
+  text-align: center;
 }
 
 .hamburger {
@@ -69,7 +73,7 @@
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 0);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -77,7 +81,7 @@
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(0px, 4px);
 }
 
 @media screen and (max-width: 768px) {
@@ -90,7 +94,7 @@
     left: 0;
     width: 100%;
     padding: 20px;
-    background-color: #333;
+    background-color: rgb(31, 35, 44);
     z-index: 1;
     opacity: 0;
     transition: all 0.3s ease-in-out;
@@ -108,7 +112,12 @@
 
   .menu li {
     margin-right: 0;
-    margin-bottom: 20px;
+    padding: 15px;
+  }
+  .menu li:hover {
+    background-color: darkslategray;
+    width: 100%;
+    text-align: center;
   }
 
   .hamburger {

@@ -1,0 +1,32 @@
+.container {
+  background-color: rgb(230, 240, 255);
+  height: 400px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  font: normal normal bold 71px montserrat, sans-serif;
+  .title {
+    color: darkslategray;
+    text-align: center;
+    letter-spacing: normal;
+    line-height: normal;
+    font-size: calc(11px + 3vw);
+    margin-bottom: 20px;
+    // font: normal normal bold 38px/1.4em montserrat, sans-serif;
+  }
+  button {
+    background-color: rgb(178 54 61);
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: darkslategray;
+      background-color: #66666672;
+    }
+  }
+}

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
+import styles from "./slug.module.scss";
+import { formatDate, getReadingTime } from "@/functions/common-function";
+import BlogCard from "@/components/blog/blog-cards/BlogCard";
+import { getRecentPosts } from "@/service/service";
+import { RWebShare } from "react-web-share";
 
+let url: any;
 const graphcms = new GraphQLClient(
   "https://api-ap-south-1.hygraph.com/v2/clefu7dgi02r601up2w9175vf/master"
 );
@@ -64,10 +70,86 @@ export async function getStaticProps({ params }: any) {
 }
 
 export const Articles = ({ post }: any) => {
+  const [recentPosts, setrecentPosts] = useState([]);
+  useEffect(() => {
+    url = window.location.origin;
+    getPosts();
+  }, []);
+  const getPosts = async () => {
+    const recentPosts: any = await getRecentPosts();
+    setrecentPosts(recentPosts);
+  };
   return (
     <>
-      <Link href={"/posts/" + post.slug}>{post.title}</Link>
-      <div dangerouslySetInnerHTML={{ __html: post.content.html }}></div>
+      <main className={styles.container}>
+        <nav>
+          <div className={styles.author}>
+            <div className={styles.author}>
+              <img
+                aria-label={post.author.name}
+                src={post.author.picture.url}
+                alt={post.author.name}
+                className={styles.author_image}
+              />
+              <span className={styles.author_name}>
+                &nbsp; {post.author.name}, &nbsp;
+              </span>
+            </div>
+            <ul>
+              <li>
+                <span>
+                  {formatDate(new Date(post.date))},{" "}
+                  {getReadingTime(post.content.html)}
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <RWebShare
+            data={{
+              text: post.title,
+              url: url + `/blog/posts${post.slug}`,
+              title: "Share this content",
+            }}
+            sites={[
+              "facebook",
+              "twitter",
+              "reddit",
+              "whatsapp",
+              "telegram",
+              "linkedin",
+              "mail",
+            ]}
+            onClick={() => console.log("shared successfully!")}
+          >
+            <span className={styles.share_icon}>
+              <li></li>
+              <li></li>
+              <li></li>
+            </span>
+          </RWebShare>
+        </nav>
+
+        <h2 className="green">{post.title}</h2>
+        <img
+          src={post.coverImage.url}
+          alt=""
+          width="100%"
+          className={styles.banner_image}
+        />
+        <div
+          dangerouslySetInnerHTML={{ __html: post.content.html }}
+          className={styles.description}
+        ></div>
+        <hr style={{ marginTop: "30px" }} />
+      </main>
+      <div className={styles.recent_post}>
+        <nav>
+          <h2>Recent Posts</h2>
+          <Link href={"/blog"}>See All</Link>
+        </nav>
+        <BlogCard data={recentPosts} />
+      </div>
     </>
   );
 };

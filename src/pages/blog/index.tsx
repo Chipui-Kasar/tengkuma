@@ -1,11 +1,10 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import { useEffect, useState } from "react";
-
-import BlogCard from "@/components/blog/BlogCard";
-import { BlogCardTypes } from "@/components/blog/BlogCardTypes";
+import { BlogCardTypes } from "@/components/blog/blog-cards/BlogCardTypes";
+import BlogCard from "@/components/blog/blog-cards/BlogCard";
+import Blogbanner from "@/components/blog/blog-banner/blogbanner";
+import styles from "./blog.module.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 const graphcms = new GraphQLClient(
@@ -42,6 +41,7 @@ const QUERY = gql`
 export const getStaticProps = async () => {
   const { posts } = await graphcms.request(QUERY);
   posts.key = posts.id;
+
   return {
     props: {
       posts,
@@ -58,14 +58,15 @@ export default function Blog({ posts }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        {posts.map((item: BlogCardTypes, key: number) => {
-          return (
-            <div key={key}>
-              <BlogCard {...item} />
-            </div>
-          );
+
+      <main className={`${styles.blog_container}`}>
+        {posts.slice(0, 1).map((item: BlogCardTypes) => {
+          return <Blogbanner {...item} />;
         })}
+        <nav>
+          <h2>All Posts</h2>
+        </nav>
+        <BlogCard data={posts} />
       </main>
     </>
   );

@@ -10,14 +10,19 @@ const Navigation = () => {
   };
 
   const closeMenu = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     setIsMenuOpen(false);
   };
 
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <Link href="/">Logo</Link>
+        <Link href="/">Tengkuma</Link>
       </div>
+
       <div
         className={`${styles.hamburger} ${isMenuOpen ? styles.active : ""}`}
         onClick={toggleMenu}
@@ -26,22 +31,29 @@ const Navigation = () => {
         <span></span>
         <span></span>
       </div>
+
       <ul className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
-        <li>
-          <Link href="/" onClick={closeMenu}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link href="/work-with-me" onClick={closeMenu}>
-            Work With me
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact" onClick={closeMenu}>
-            Contact
-          </Link>
-        </li>
+        <Link href="/" onClick={closeMenu}>
+          <li>Home</li>
+        </Link>
+        <Link href="/work-with-me" onClick={closeMenu}>
+          <li>Work With me</li>
+        </Link>
+        <Link href="/blog" onClick={closeMenu}>
+          <li>Blog</li>
+        </Link>
+        <Link href="/contact" onClick={closeMenu}>
+          <li>Contact</li>
+        </Link>
+        {/* <li>
+          <form>
+            <input
+              type="text"
+              placeholder="search"
+              style={{ padding: "10px", borderRadius: "3px", border: "none" }}
+            />
+          </form>
+        </li> */}
       </ul>
     </nav>
   );
