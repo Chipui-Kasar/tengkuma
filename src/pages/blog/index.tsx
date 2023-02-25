@@ -2,10 +2,10 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import BlogCard from "../components/blog/BlogCard";
-import { BlogCardTypes } from "@/components/blog/BlogCardTypes";
-import Navigation from "@/components/navigation/navigation";
+import { useEffect, useState } from "react";
 
+import BlogCard from "@/components/blog/BlogCard";
+import { BlogCardTypes } from "@/components/blog/BlogCardTypes";
 const inter = Inter({ subsets: ["latin"] });
 
 const graphcms = new GraphQLClient(
@@ -49,7 +49,7 @@ export const getStaticProps = async () => {
     revalidate: 10,
   };
 };
-export default function Index({ posts }: any) {
+export default function Blog({ posts }: any) {
   return (
     <>
       <Head>
@@ -58,7 +58,6 @@ export default function Index({ posts }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Navigation /> */}
       <main className={styles.main}>
         {posts.map((item: BlogCardTypes, key: number) => {
           return (
