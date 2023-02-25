@@ -6,13 +6,32 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Tengkuma</title>
+        <title>Tengkuma | Chipui kasar</title>
         <meta
           name="description"
-          content="Tengkuma is a vibrant and dynamic blog website that features a diverse range of content on various topics, including lifestyle, health, technology, entertainment, and more. With a team of passionate writers and bloggers, Tengkuma delivers fresh and engaging content that keeps readers coming back for more. From informative articles to personal anecdotes and thought-provoking opinion pieces, Tengkuma has something for everyone. With an easy-to-use interface and a commitment to quality content, Tengkuma is the go-to destination for anyone looking for insightful and engaging blog posts."
+          content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Tengkuma | Chipui kasar" />
+        <meta
+          property="og:description"
+          content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more."
+        />
+        <meta
+          property="og:image"
+          content="https://media.graphassets.com/dkAe2w0R2Ixwgey8AoEQ"
+        />
+        <meta
+          property="og:url"
+          content="https://media.graphassets.com/dkAe2w0R2Ixwgey8AoEQ"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Author information */}
+        <meta name="author" content="Chipui Kasar" />
+        <meta name="twitter:creator" content="@chipuikasar" />
       </Head>
 
       <main className={`${styles.home}`}>

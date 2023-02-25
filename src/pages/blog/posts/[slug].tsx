@@ -6,6 +6,8 @@ import { formatDate, getReadingTime } from "@/functions/common-function";
 import BlogCard from "@/components/blog/blog-cards/BlogCard";
 import { getRecentPosts } from "@/service/service";
 import { RWebShare } from "react-web-share";
+import Head from "next/head";
+import { BlogCardTypes } from "@/components/blog/blog-cards/BlogCardTypes";
 
 let url: any;
 const graphcms = new GraphQLClient(
@@ -81,6 +83,23 @@ export const Articles = ({ post }: any) => {
   };
   return (
     <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.excerpt} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.coverImage.url} />
+        <meta property="og:url" content={post.coverImage.url} />
+        <meta name="keywords" content={post.seo.keywords + "," + post.tags} />
+        <meta property="og:type" content="website" />
+
+        {/* Author information */}
+        <meta name="author" content={post.author.name} />
+        <meta name="twitter:creator" content="@chipuikasar" />
+      </Head>
       <main className={styles.container}>
         <nav>
           <div className={styles.author}>
