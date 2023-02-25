@@ -8,9 +8,9 @@ import Image from "next/image";
 const BlogCard = (props: any) => {
   return (
     <div className={styles.container}>
-      {props.data.map((item: BlogCardTypes) => {
+      {props.data.map((item: BlogCardTypes, key: any) => {
         return (
-          <div className={styles.grid}>
+          <div className={styles.grid} key={key}>
             <Link href={"/blog/posts/" + item.slug}>
               <Image
                 src={item.coverImage.url}

@@ -5,8 +5,8 @@ function Profilefooter() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        I'd Love to Hear From You.
-        <br /> Here's How You Can Reach Me
+        I&apos;d Love to Hear From You.
+        <br /> Here&apos;s How You Can Reach Me
       </div>
       <button>
         <Link href="/contact">Get In Touch</Link>

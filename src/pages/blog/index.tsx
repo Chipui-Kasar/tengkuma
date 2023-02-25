@@ -82,8 +82,8 @@ export default function Blog({ posts }: any) {
       </Head>
 
       <main className={`${styles.blog_container}`}>
-        {posts.slice(0, 1).map((item: BlogCardTypes) => {
-          return <Blogbanner {...item} />;
+        {posts.slice(0, 1).map((item: BlogCardTypes, key: any) => {
+          return <Blogbanner {...item} key={key} />;
         })}
         <nav>
           <h2>All Posts</h2>
