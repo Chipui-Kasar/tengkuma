@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./profilesection.module.scss";
 
 function Profilesection() {
@@ -17,8 +17,8 @@ function Profilesection() {
           aria-label="Chipui Kasar"
           src="https://media.graphassets.com/ON2vDzY8Q5yZ1Y7C2Kkp"
           alt="Chipui Kasar"
-          width={100}
-          height={100}
+          width={200}
+          height={200}
         />
       </div>
     </div>

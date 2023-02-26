@@ -1,5 +1,6 @@
 import { formatDate, getReadingTime } from "@/functions/common-function";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BlogCardTypes } from "../blog-cards/BlogCardTypes";
 import styles from "./blogbanner.module.scss";
@@ -21,7 +22,9 @@ function Blogbanner(props: BlogCardTypes) {
           {formatDate(new Date(props.date))} -{" "}
           {getReadingTime(props.content.html)}
         </div>
-        <div className={styles.title}>{props.title}</div>
+        <Link href={"/blog/posts/" + props.slug} className={styles.title}>
+          {props.title}
+        </Link>
         <div
           className={styles.description}
           dangerouslySetInnerHTML={{ __html: props.excerpt }}

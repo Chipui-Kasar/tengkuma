@@ -28,7 +28,6 @@
   padding: 0;
   transition: all 0.3s ease-in-out;
   align-items: center;
-  width: 50%;
 }
 
 .menu li {
@@ -45,6 +44,9 @@
   font-size: 16px;
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
 }
 
 .hamburger {
@@ -86,18 +88,15 @@
 
 @media screen and (max-width: 768px) {
   .menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     padding: 20px;
     background-color: rgb(31, 35, 44);
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
+
+    transform: translateY(-500%);
+    transition: all 1s ease-in-out;
   }
 
   .menu.active {
@@ -106,13 +105,13 @@
     align-items: center;
     opacity: 1;
     transform: translateY(0%);
-
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .menu li {
     margin-right: 0;
-    padding: 15px;
+    width: 100%;
+    text-align: center;
   }
   .menu li:hover {
     background-color: darkslategray;

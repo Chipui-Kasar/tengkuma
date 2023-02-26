@@ -11,7 +11,15 @@ const BlogCard = (props: any) => {
       {props.data.map((item: BlogCardTypes, key: any) => {
         return (
           <div className={styles.grid} key={key}>
-            <Link href={"/blog/posts/" + item.slug}>
+            <Link
+              href={"/blog/posts/" + item.slug}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+            >
               <Image
                 aria-label={item.title}
                 src={item.coverImage.url}
