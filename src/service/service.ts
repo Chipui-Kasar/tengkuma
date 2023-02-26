@@ -4,7 +4,7 @@ const graphcms = new GraphQLClient(
 );
 const Recent_QUERY = gql`
   {
-    posts(orderBy: date_DESC, first: 3) {
+    posts(orderBy: date_DESC, first: 4) {
       id
       title
       slug
@@ -32,7 +32,7 @@ const Recent_QUERY = gql`
 `;
 const ALL_QUERY = gql`
   {
-    posts {
+    posts(orderBy: date_DESC) {
       id
       title
       slug

@@ -8,7 +8,7 @@ import Image from "next/image";
 const BlogCard = (props: any) => {
   return (
     <div className={styles.container}>
-      {props.data.map((item: BlogCardTypes, key: any) => {
+      {props.data.slice(1).map((item: BlogCardTypes, key: any) => {
         return (
           <div className={styles.grid} key={key}>
             <Link
@@ -24,8 +24,8 @@ const BlogCard = (props: any) => {
                 aria-label={item.title}
                 src={item.coverImage.url}
                 alt={item.title}
-                width={100}
-                height={100}
+                width={150}
+                height={150}
               />
               <div className={styles.pub_date}>
                 {formatDate(new Date(item.date))},{" "}

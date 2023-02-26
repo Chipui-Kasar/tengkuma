@@ -1,45 +1,15 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { GraphQLClient, gql } from "graphql-request";
 import { BlogCardTypes } from "@/components/blog/blog-cards/BlogCardTypes";
 import BlogCard from "@/components/blog/blog-cards/BlogCard";
 import Blogbanner from "@/components/blog/blog-banner/blogbanner";
 import styles from "./blog.module.scss";
+import { getAllPosts } from "@/service/service";
 const inter = Inter({ subsets: ["latin"] });
 
-const graphcms = new GraphQLClient(
-  "https://api-ap-south-1.hygraph.com/v2/clefu7dgi02r601up2w9175vf/master"
-);
-const QUERY = gql`
-  {
-    posts {
-      id
-      title
-      slug
-      excerpt
-      date
-      coverImage {
-        url
-      }
-      seo {
-        keywords
-      }
-      tags
-      author {
-        id
-        name
-        picture {
-          url
-        }
-      }
-      content {
-        html
-      }
-    }
-  }
-`;
 export const getStaticProps = async () => {
-  const { posts } = await graphcms.request(QUERY);
+  const posts: any = await getAllPosts();
+  // const { posts } = await graphcms.request(QUERY);
   posts.key = posts.id;
 
   return {

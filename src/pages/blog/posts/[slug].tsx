@@ -81,6 +81,7 @@ export const Articles = ({ post }: any) => {
     const recentPosts: any = await getRecentPosts();
     setrecentPosts(recentPosts);
   };
+
   return (
     <>
       <Head>
@@ -93,7 +94,10 @@ export const Articles = ({ post }: any) => {
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.coverImage.url} />
         <meta property="og:url" content={post.coverImage.url} />
-        <meta name="keywords" content={post.seo.keywords + "," + post.tags} />
+        <meta
+          name="keywords"
+          content={post.seo !== null ? post.seo.keywords : "" + "," + post.tags}
+        />
         <meta property="og:type" content="website" />
 
         {/* Author information */}
