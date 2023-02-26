@@ -10,9 +10,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <AnimatePresence>
         <motion.div
           key={router.route}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
           <Navigation />
