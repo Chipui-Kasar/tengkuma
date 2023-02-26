@@ -8,17 +8,17 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <div className="app-container">
       <Navigation />
-      <AnimatePresence>
-        <motion.div
-          key={router.route}
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
+
+      <motion.div
+        key={router.route}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Component {...pageProps} />
+      </motion.div>
+
       <Footer />
     </div>
   );
