@@ -7,7 +7,6 @@ import BlogCard from "@/components/blog/blog-cards/BlogCard";
 import { getRecentPosts } from "@/service/service";
 import { RWebShare } from "react-web-share";
 import Head from "next/head";
-import { BlogCardTypes } from "@/components/blog/blog-cards/BlogCardTypes";
 import Image from "next/image";
 
 let url: any;
@@ -152,7 +151,7 @@ export const Articles = ({ post }: any) => {
           </RWebShare>
         </nav>
 
-        <h2 className="green">{post.title}</h2>
+        <h2 style={{ color: "#000" }}>{post.title}</h2>
         <Image
           aria-label={post.title}
           src={post.coverImage.url}
