@@ -14,6 +14,7 @@ function Profilesection() {
       </div>
       <div className={styles.profile_image}>
         <Image
+          aria-label="Chipui Kasar"
           src="https://media.graphassets.com/ON2vDzY8Q5yZ1Y7C2Kkp"
           alt="Chipui Kasar"
           width={100}

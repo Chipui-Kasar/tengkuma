@@ -13,8 +13,9 @@ const BlogCard = (props: any) => {
           <div className={styles.grid} key={key}>
             <Link href={"/blog/posts/" + item.slug}>
               <Image
+                aria-label={item.title}
                 src={item.coverImage.url}
-                alt={item.author.name}
+                alt={item.title}
                 width={100}
                 height={100}
               />
@@ -26,10 +27,11 @@ const BlogCard = (props: any) => {
               <div className={styles.description}>{item.excerpt}</div>
             </Link>
             <Image
+              aria-label={item.author.name}
               width={10}
               height={10}
               src={item.author.picture.url}
-              alt=""
+              alt={item.author.name}
               style={{
                 width: "20px",
                 height: "20px",

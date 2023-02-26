@@ -154,8 +154,9 @@ export const Articles = ({ post }: any) => {
 
         <h2 className="green">{post.title}</h2>
         <Image
+          aria-label={post.title}
           src={post.coverImage.url}
-          alt=""
+          alt={post.title}
           className={styles.banner_image}
           width={300}
           height={300}

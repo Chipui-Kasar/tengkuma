@@ -10,8 +10,9 @@ function Blogbanner(props: BlogCardTypes) {
       <h2>All The Tips In One Place</h2>
       <div className={styles.highlight}>
         <Image
+          aria-label={props.title}
           src={props.coverImage.url}
-          alt=""
+          alt={props.title}
           width={300}
           height={300}
           className={styles.banner_image}
