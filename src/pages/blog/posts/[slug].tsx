@@ -151,7 +151,9 @@ export const Articles = ({ post }: any) => {
           </RWebShare>
         </nav>
 
-        <h2 style={{ color: "#fff" }}>{post.title}</h2>
+        <h2 className="green" style={{ color: "#fff" }}>
+          {post.title}
+        </h2>
         <Image
           aria-label={post.title}
           src={post.coverImage.url}
