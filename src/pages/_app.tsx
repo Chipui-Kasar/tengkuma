@@ -7,6 +7,7 @@ import type { AppProps } from "next/app";
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <div className="app-container">
+      <Navigation />
       <AnimatePresence>
         <motion.div
           key={router.route}
@@ -15,11 +16,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
           exit={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Navigation />
           <Component {...pageProps} />
-          <Footer />
         </motion.div>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }
