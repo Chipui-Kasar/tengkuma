@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navigation.module.css";
+import Image from "next/image";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,9 @@ const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <Link href="/">Tengkuma</Link>
+        <Link href="/">
+          <Image src={"/logo.png"} width={300} height={300} alt="Tengkuma" />
+        </Link>
       </div>
       {/* <form>
         <input

@@ -6,7 +6,7 @@ function Profilesection() {
   return (
     <div className={styles.container}>
       <div className={styles.profile_title}>
-        I hail from North-East India and specialize in ReactJs development.
+        I hail from North-East India and specialize in Front End development.
         Passionate about exploring innovative concepts, I take great pleasure in
         collaborating with like-minded individuals who share the same vision of
         using technology for the greater good. I am quite unconventional and
