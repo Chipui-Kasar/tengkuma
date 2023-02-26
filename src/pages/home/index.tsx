@@ -28,6 +28,10 @@ function Home() {
           content="https://media.graphassets.com/dkAe2w0R2Ixwgey8AoEQ"
         />
         <meta property="og:type" content="website" />
+        <meta
+          name="google-site-verification"
+          content="KrT1sWgLJCi0eyUJuGBI4aZ3Nc1PjP0Pqe1z4Jeq22I"
+        />
 
         {/* Author information */}
         <meta name="author" content="Chipui Kasar" />
