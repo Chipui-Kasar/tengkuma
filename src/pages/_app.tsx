@@ -11,9 +11,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
       <motion.div
         key={router.route}
-        initial={{ opacity: 1 }}
+        initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 1 }}
+        exit={{ opacity: 0.4 }}
         transition={{ duration: 0.5 }}
       >
         <Component {...pageProps} />
