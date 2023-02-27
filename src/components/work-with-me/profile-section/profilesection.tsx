@@ -6,16 +6,15 @@ function Profilesection() {
   return (
     <div className={styles.container}>
       <div className={styles.profile_title}>
-        I hail from North-East India and specialize in Front End development.
-        Passionate about exploring innovative concepts, I take great pleasure in
-        collaborating with like-minded individuals who share the same vision of
-        using technology for the greater good. I am quite unconventional and
-        unique in my own way
+        <h1>
+          Shop From your favourite site and order with my account! Get unlimited
+          cashback / Get the product at a lower price
+        </h1>
       </div>
       <div className={styles.profile_image}>
         <Image
           aria-label="Chipui Kasar"
-          src="https://media.graphassets.com/ON2vDzY8Q5yZ1Y7C2Kkp"
+          src={"/author.png"}
           alt="Chipui Kasar"
           width={200}
           height={200}

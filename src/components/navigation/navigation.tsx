@@ -50,8 +50,13 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
-          <Link href="/work-with-me" onClick={closeMenu}>
-            Work With me
+          <Link href="/tengkuma" onClick={closeMenu}>
+            Tengkuma
+          </Link>
+        </li>
+        <li>
+          <Link href="/store" onClick={closeMenu}>
+            Store
           </Link>
         </li>
         <li>

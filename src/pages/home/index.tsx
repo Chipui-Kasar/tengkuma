@@ -12,7 +12,10 @@ function Home() {
           content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <meta
+          name="keywords"
+          content="Tengkuma, Chipui Kasar, Chipui, Tengkuma Chipui, Latest technology, Sharepoint, Artificial Intelligence, SharePoint Online, Reactjs, Nextjs, How to,"
+        />
         {/* Open Graph meta tags */}
         <meta property="og:title" content="Tengkuma | Chipui kasar" />
         <meta
@@ -37,7 +40,6 @@ function Home() {
         <meta name="author" content="Chipui Kasar" />
         <meta name="twitter:creator" content="@chipuikasar" />
       </Head>
-
       <main className={`${styles.home}`}>
         <div className={styles.intro}>
           Take Your <span className={styles.primaryGlow}>Business</span> To
@@ -51,6 +53,9 @@ function Home() {
           <button>Submit</button>
         </form>
       </main>
+      <h1 style={{ zIndex: "-1", position: "absolute", visibility: "hidden" }}>
+        TENGKUMA
+      </h1>
     </>
   );
 }
