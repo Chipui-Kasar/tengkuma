@@ -6,7 +6,7 @@ function Contactshowcase() {
     <div className={styles.container}>
       <h2>Available Here Too</h2>
       <div className={styles.contact_details}>
-        <Link href={"mailto:chipuikasar@gmail.com"}>Chipuikasar@gmail.com</Link>
+        <Link href={"mailto:chipuikasar@gmail.com"}>Send Mail</Link>
         <span>+91 8264163783</span>
       </div>
       {/* <div className={styles.contact_social}>

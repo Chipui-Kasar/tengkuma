@@ -18,6 +18,15 @@
     place-items: center;
     font-size: calc(8px + 1vw);
     margin-bottom: 30px;
+    a {
+      background-color: darkslategray;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      &:hover {
+        background-color: rgb(178, 54, 61);
+      }
+    }
   }
   // .contact_social {
   //   display: flex;
