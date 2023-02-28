@@ -25,7 +25,12 @@ const QUERY = gql`
         url
       }
       seo {
+        image {
+          url
+        }
         keywords
+        title
+        description
       }
       tags
       author {
@@ -72,6 +77,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export const Articles = ({ post }: any) => {
+
   const [recentPosts, setrecentPosts] = useState([]);
   useEffect(() => {
     url = window.location.origin;
@@ -85,15 +91,15 @@ export const Articles = ({ post }: any) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{post.seo.title}</title>
+        <meta name="description" content={post.seo.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph meta tags */}
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.coverImage.url} />
-        <meta property="og:url" content={post.coverImage.url} />
+        <meta property="og:title" content={post.seo.title} />
+        <meta property="og:description" content={post.seo.description} />
+        <meta property="og:image" content={post.seo.image.url} />
+        <meta property="og:url" content={post.seo.image.url} />
         <meta
           name="keywords"
           content={post.seo !== null ? post.seo.keywords : "" + "," + post.tags}

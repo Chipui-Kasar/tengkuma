@@ -42,7 +42,12 @@ const ALL_QUERY = gql`
         url
       }
       seo {
+        image {
+          url
+        }
         keywords
+        title
+        description
       }
       tags
       author {
