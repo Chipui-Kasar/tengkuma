@@ -79,6 +79,15 @@
   margin: 0;
 }
 
+code {
+  margin-inline-start: 15px !important;
+  background: black !important;
+  color: yellow !important;
+  max-width: 95%;
+  display: inline-block;
+  overflow: auto;
+}
+
 html,
 body {
   max-width: 100vw;
