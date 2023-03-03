@@ -61,7 +61,7 @@ export default function Blog({ posts }: any) {
         <nav>
           <h2>All Posts</h2>
         </nav>
-        <BlogCard data={posts} />
+        <BlogCard data={posts} parent="main" />
       </main>
     </>
   );

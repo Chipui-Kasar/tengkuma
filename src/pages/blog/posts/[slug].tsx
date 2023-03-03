@@ -77,7 +77,6 @@ export async function getStaticProps({ params }: any) {
 }
 
 export const Articles = ({ post }: any) => {
-
   const [recentPosts, setrecentPosts] = useState([]);
   useEffect(() => {
     url = window.location.origin;
@@ -161,9 +160,7 @@ export const Articles = ({ post }: any) => {
           </RWebShare>
         </nav>
 
-        <h2 className="green" style={{ color: "#fff" }}>
-          {post.title}
-        </h2>
+        <h2>{post.title}</h2>
         <Image
           aria-label={post.title}
           src={post.coverImage.url}
@@ -183,7 +180,7 @@ export const Articles = ({ post }: any) => {
           <h2>Recent Posts</h2>
           <Link href={"/blog"}>See All</Link>
         </nav>
-        <BlogCard data={recentPosts} />
+        <BlogCard data={recentPosts} parent="slug" />
       </div>
     </>
   );

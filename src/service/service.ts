@@ -4,7 +4,7 @@ const graphcms = new GraphQLClient(
 );
 const Recent_QUERY = gql`
   {
-    posts(orderBy: date_DESC, first: 4) {
+    posts(orderBy: date_DESC, first: 3) {
       id
       title
       slug
