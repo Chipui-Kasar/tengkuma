@@ -59,7 +59,7 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.map((post: any) => ({ params: { slug: post.slug } })),
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
@@ -138,7 +138,7 @@ export const Articles = ({ post }: any) => {
           <RWebShare
             data={{
               text: post.title,
-              url: url + `/blog/posts${post.slug}`,
+              url: url + `/blog/posts/${post.slug}`,
               title: "Share this content",
             }}
             sites={[
