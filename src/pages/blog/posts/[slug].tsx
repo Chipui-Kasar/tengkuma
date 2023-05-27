@@ -172,6 +172,7 @@ export const Articles = ({ post }: any) => {
         <div
           dangerouslySetInnerHTML={{ __html: post.content.html }}
           className={styles.description}
+          id="mainContent"
         ></div>
         <hr style={{ marginTop: "30px" }} />
       </main>
