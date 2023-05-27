@@ -224,3 +224,8 @@ a {
   width: 100% !important;
   height: 100% !important;
 }
+
+#mainContent p,
+#mainContent ul {
+  margin-bottom: 15px;
+}
