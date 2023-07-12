@@ -49,14 +49,14 @@ const Navigation = () => {
             Home
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/tengkuma" onClick={closeMenu}>
             Tengkuma
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/store" onClick={closeMenu}>
-            Store
+            Phones
           </Link>
         </li>
         <li>
