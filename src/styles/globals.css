@@ -152,7 +152,47 @@ ol {
 .pink {
   color: #ffc0cb;
 }
+/* Light colors */
 
+.lightred {
+  color: #dc143c;
+}
+
+.lightgreen {
+  color: #228b22;
+}
+
+.lightblue {
+  color: #add8e6;
+}
+
+.lightyellow {
+  color: #f0e68c;
+}
+
+.lightcyan {
+  color: #2effee;
+}
+
+.lightmagenta {
+  color: #d8bfd8;
+}
+
+.lightgray {
+  color: #d3d3d3;
+}
+
+.lightbrown {
+  color: #c0a53e;
+}
+
+.lightpurple {
+  color: #9900ff;
+}
+
+.lightpink {
+  color: #ffb6c1;
+}
 /* Dark colors */
 .darkred {
   color: #8b0000;
@@ -224,7 +264,9 @@ a {
   width: 100% !important;
   height: 100% !important;
 }
-
+#mainContent a {
+  color: skyblue;
+}
 #mainContent p,
 #mainContent ul {
   margin-bottom: 15px;
