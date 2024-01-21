@@ -7,21 +7,21 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Tengkuma | Chipui kasar</title>
+        <title>Iwui Tengkuma | Chipui kasar</title>
         <meta
           name="description"
-          content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more."
+          content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more. Iwui Tengkuma"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
-          content="Tengkuma, Chipui Kasar, Chipui, Tengkuma Chipui, Latest technology, Sharepoint, Artificial Intelligence, SharePoint Online, Reactjs, Nextjs, How to,"
+          content="Iwui Tengkuma, Chipui Kasar, Chipui, Iwui Tengkuma Chipui, Latest technology, Sharepoint, Artificial Intelligence, SharePoint Online, Reactjs, Nextjs, How to,"
         />
         {/* Open Graph meta tags */}
-        <meta property="og:title" content="Tengkuma | Chipui kasar" />
+        <meta property="og:title" content="Iwui Tengkuma | Chipui kasar" />
         <meta
           property="og:description"
-          content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more."
+          content="Welcome to our website blog! Here you'll find articles on a variety of topics, including technology, lifestyle, and more. Iwui Tengkuma"
         />
         <meta
           property="og:image"
@@ -57,7 +57,7 @@ function Home() {
         </Link>
       </main>
       <h1 style={{ zIndex: "-1", position: "absolute", visibility: "hidden" }}>
-        TENGKUMA
+        IWUI TENGKUMA
       </h1>
     </>
   );

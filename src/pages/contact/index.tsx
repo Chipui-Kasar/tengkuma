@@ -10,18 +10,18 @@ function Contact() {
         <title>Contact</title>
         <meta
           name="description"
-          content="Get in touch with our team for any inquiries or feedback. Our contact form is available 24/7 and we'll get back to you as soon as possible."
+          content="Get in touch with our team for any inquiries or feedback. Our contact form is available 24/7 and we'll get back to you as soon as possible. Iwui Tengkuma"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
-          content="Tengkuma, Chipui Kasar, Chipui, Tengkuma Chipui, Latest technology, Sharepoint, Artificial Intelligence, SharePoint Online, Reactjs, Nextjs, How to,"
+          content="Iwui Tengkuma, Chipui Kasar, Chipui, Iwui Tengkuma Chipui, Latest technology, Sharepoint, Artificial Intelligence, SharePoint Online, Reactjs, Nextjs, How to,"
         />
         {/* Open Graph meta tags */}
         <meta property="og:title" content="Contact" />
         <meta
           property="og:description"
-          content="Get in touch with our team for any inquiries or feedback. Our contact form is available 24/7 and we'll get back to you as soon as possible."
+          content="Get in touch with our team for any inquiries or feedback. Our contact form is available 24/7 and we'll get back to you as soon as possible. Iwui Tengkuma"
         />
         <meta
           property="og:image"

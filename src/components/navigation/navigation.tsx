@@ -22,7 +22,12 @@ const Navigation = () => {
     <nav className={styles.nav}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src={"/logo.png"} width={300} height={300} alt="Tengkuma" />
+          <Image
+            src={"/logo.png"}
+            width={300}
+            height={300}
+            alt="Iwui Tengkuma"
+          />
         </Link>
       </div>
       {/* <form>
