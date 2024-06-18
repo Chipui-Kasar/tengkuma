@@ -2,7 +2,7 @@
   margin-top: 20px;
   color: black;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   .grid {
     background-color: #fff;
@@ -22,13 +22,13 @@
       margin-bottom: 10px;
     }
     .title {
-      font-size: calc(6px + 1vw);
+      font-size: 1.2em;
       font-weight: 800;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      height: 60px;
+      height: 59px;
       transition: all 0.3s ease-in-out;
       &:hover {
         color: darkslategray;
@@ -41,7 +41,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       height: 80px;
-      font-size: calc(6px + 1vw);
+      font-size: 1em;
     }
     .author {
       color: #000;
