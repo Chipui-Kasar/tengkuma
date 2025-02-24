@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const getStaticProps = async () => {
   const posts: any = await getAllPosts();
+
   // const { posts } = await graphcms.request(QUERY);
   posts.key = posts.id;
 
