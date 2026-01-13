@@ -24,7 +24,7 @@ const BlogCard = (props: any) => {
               >
                 <Image
                   aria-label={item.title}
-                  src={item.coverImage.url}
+                  src={item.coverImage?.url}
                   alt={item.title}
                   width={150}
                   height={150}
@@ -37,11 +37,11 @@ const BlogCard = (props: any) => {
                 <div className={styles.description}>{item.excerpt}</div>
               </Link>
               <Image
-                aria-label={item.author.name}
+                aria-label={item.author?.name}
                 width={10}
                 height={10}
-                src={item.author.picture.url}
-                alt={item.author.name}
+                src={item.author?.picture?.url}
+                alt={item.author?.name}
                 style={{
                   width: "20px",
                   height: "20px",
@@ -49,7 +49,7 @@ const BlogCard = (props: any) => {
                   bottom: "10px",
                 }}
               />
-              <div className={styles.author}>{item.author.name}</div>
+              <div className={styles.author}>{item.author?.name}</div>
             </div>
           );
         })}

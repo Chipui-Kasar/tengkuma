@@ -12,7 +12,7 @@ function Blogbanner(props: BlogCardTypes) {
       <div className={styles.highlight}>
         <Image
           aria-label={props.title}
-          src={props.coverImage.url}
+          src={props.coverImage?.url}
           alt={props.title}
           width={300}
           height={300}
@@ -20,7 +20,7 @@ function Blogbanner(props: BlogCardTypes) {
         />
         <div className={styles.pub_date}>
           {formatDate(new Date(props.date))} -{" "}
-          {getReadingTime(props.content.html)}
+          {getReadingTime(props.content?.html)}
         </div>
         <Link href={"/blog/posts/" + props.slug} className={styles.title}>
           {props.title}

@@ -114,9 +114,9 @@ export const Articles = ({ post }: any) => {
           <div className={styles.author}>
             <div className={styles.author}>
               <Image
-                aria-label={post.author.name}
-                src={post.author.picture.url}
-                alt={post.author.name}
+                aria-label={post.author?.name}
+                src={post.author.picture?.url}
+                alt={post.author?.name}
                 className={styles.author_image}
                 width={10}
                 height={10}
@@ -129,7 +129,7 @@ export const Articles = ({ post }: any) => {
               <li>
                 <span>
                   {formatDate(new Date(post.date))},{" "}
-                  {getReadingTime(post.content.html)}
+                  {getReadingTime(post.content?.html)}
                 </span>
               </li>
             </ul>
@@ -163,7 +163,7 @@ export const Articles = ({ post }: any) => {
         <h2>{post.title}</h2>
         <Image
           aria-label={post.title}
-          src={post.coverImage.url}
+          src={post.coverImage?.url}
           alt={post.title}
           className={styles.banner_image}
           width={300}
