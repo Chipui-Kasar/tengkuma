@@ -19,8 +19,7 @@ function Blogbanner(props: BlogCardTypes) {
           className={styles.banner_image}
         />
         <div className={styles.pub_date}>
-          {formatDate(new Date(props.date))} -{" "}
-          {getReadingTime(props.content?.html)}
+          {formatDate(new Date(props.date))}
         </div>
         <Link href={"/blog/posts/" + props.slug} className={styles.title}>
           {props.title}

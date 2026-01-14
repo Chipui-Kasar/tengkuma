@@ -55,10 +55,10 @@ const SLUGLIST = gql`
 `;
 
 export async function getStaticPaths() {
-  const { posts } = await graphcms.request(SLUGLIST);
-
+  // Only pre-render the most recent posts at build time to avoid rate limits
+  // Other pages will be generated on-demand with fallback: 'blocking'
   return {
-    paths: posts.map((post: any) => ({ params: { slug: post.slug } })),
+    paths: [], // Pre-render no pages at build time
     fallback: "blocking",
   };
 }
@@ -97,8 +97,12 @@ export const Articles = ({ post }: any) => {
         {/* Open Graph meta tags */}
         <meta property="og:title" content={post.seo?.title} />
         <meta property="og:description" content={post.seo?.description} />
-        <meta property="og:image" content={post.seo?.image?.url} />
-        <meta property="og:url" content={post.seo?.image?.url} />
+        {post.seo?.image?.url && (
+          <meta property="og:image" content={post.seo.image.url} />
+        )}
+        {post.seo?.image?.url && (
+          <meta property="og:url" content={post.seo.image.url} />
+        )}
         <meta
           name="keywords"
           content={

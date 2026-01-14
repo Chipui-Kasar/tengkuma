@@ -1,5 +1,3 @@
-import { HtmlProps } from "next/dist/shared/lib/html-context";
-
 export interface BlogCardTypes {
   id: any;
   title: string;
