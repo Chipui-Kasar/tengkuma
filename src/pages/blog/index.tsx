@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
     props: {
       posts,
     },
-    revalidate: 10,
+    revalidate: 3000,
   };
 };
 export default function Blog({ posts }: any) {
