@@ -90,18 +90,20 @@ export const Articles = ({ post }: any) => {
   return (
     <>
       <Head>
-        <title>{post.seo.title}</title>
-        <meta name="description" content={post.seo.description} />
+        <title>{post.seo?.title}</title>
+        <meta name="description" content={post.seo?.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph meta tags */}
-        <meta property="og:title" content={post.seo.title} />
-        <meta property="og:description" content={post.seo.description} />
-        <meta property="og:image" content={post.seo.image.url} />
-        <meta property="og:url" content={post.seo.image.url} />
+        <meta property="og:title" content={post.seo?.title} />
+        <meta property="og:description" content={post.seo?.description} />
+        <meta property="og:image" content={post.seo?.image?.url} />
+        <meta property="og:url" content={post.seo?.image?.url} />
         <meta
           name="keywords"
-          content={post.seo !== null ? post.seo.keywords : "" + "," + post.tags}
+          content={
+            post.seo !== null ? post.seo?.keywords : "" + "," + post.tags
+          }
         />
         <meta property="og:type" content="website" />
 

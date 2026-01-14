@@ -31,7 +31,7 @@ const BlogCard = (props: any) => {
                 />
                 <div className={styles.pub_date}>
                   {formatDate(new Date(item.date))},{" "}
-                  {getReadingTime(item.content.html)}
+                  {getReadingTime(item.content?.html)}
                 </div>
                 <div className={styles.title}>{item.title}</div>
                 <div className={styles.description}>{item.excerpt}</div>

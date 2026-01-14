@@ -57,9 +57,6 @@ const ALL_QUERY = gql`
           url
         }
       }
-      content {
-        html
-      }
     }
   }
 `;

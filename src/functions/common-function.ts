@@ -14,12 +14,18 @@ export const formatDate = (date: any) => {
   if (dayDiff < 7) {
     return `${dayDiff} days ago`;
   }
-  return date.toLocaleDateString(); // Fallback to regular date format for older dates
+  // Use consistent date format for both server and client
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+  return date.toLocaleDateString("en-US", options);
 };
 
 export const getReadingTime = (text: any) => {
   const wordsPerMinute = 200; // Change this to adjust reading speed
-  const wordCount = text.trim().split(/\s+/g).length;
+  const wordCount = text?.trim()?.split(/\s+/g)?.length;
   const readingTimeMinutes = wordCount / wordsPerMinute;
   const readingTime = Math.ceil(readingTimeMinutes);
   return `${readingTime} min read`;
